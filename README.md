@@ -61,14 +61,16 @@ print("Первые", n, "чисел Фибоначчи:", fibonacci_numbers)
 
 ```python
 def gcd(a, b):
-    while b:
-        a, b = b, a % b
-    return a
+    while a!=0 and b!=0:
+        if a > b:
+            a = a % b
+        else:
+            b = b % a
+    print (a+b)
 
 num1 = int(input("Введите первое число: "))
 num2 = int(input("Введите второе число: "))
-result = gcd(num1, num2)
-print("НОД чисел", num1, "и", num2, "равен", result)
+gcd(num1, num2)
 ```
 
 **Задача 6: Сортировка списка (метод пузырька)**
